@@ -21,10 +21,18 @@
     </div>
     <img class="as-logo" src="assets/logo.png" alt="Astro Shore" width="110" height="76">
   </header>
-  <section class="as-universe" aria-label="Planetas: selecciona uno para conocerlo">
+  <section class="as-welcome" aria-labelledby="as-welcome-title">
+    <span class="as-eyebrow">BIENVENIDO A ASTRO SHORE</span>
+    <h1 id="as-welcome-title">Descubre las personalidades<br>de los astros</h1>
+    <p>Cada astro tiene su propia personalidad… ¡y mucho que contar! Conoce lo interesantes que son, observa cómo se mueven y descubre qué los hace únicos.</p>
+    <p class="as-welcome-tip">Pica sobre ellos para descubrir quiénes son, cómo están y qué historias tienen para ti. Si quieres ponerle ritmo al viaje, activa la música.</p>
+    <button class="as-enter" type="button">Okay, ¡vamos! →</button>
+  </section>
+  <section class="as-universe" aria-label="Planetas: selecciona uno para conocerlo" hidden>
     <h1 class="as-sr">Los personajes de Astro Shore</h1>
     <div class="as-orbits"></div>
     <p class="as-hint">Toca un planeta para conocerlo. <span>Directo → · ← Retrógrado</span></p>
+    <div class="as-universe-end"><button class="as-conclusion-toggle" type="button">Conclusión del proyecto →</button></div>
   </section>
   <section class="as-detail" aria-label="Ficha del planeta" hidden>
     <button class="as-back" type="button">← Volver al universo</button>
@@ -37,6 +45,17 @@
       <div class="as-bio"><h2>Quién es</h2><p class="as-personality"></p></div>
       <div class="as-mood"><h2>Cómo está</h2><p class="as-status-title"></p><p class="as-status-text"></p></div>
       <div class="as-effect"><h2>Cómo te afecta</h2><p class="as-effect-text"></p></div>
+    </div>
+  </section>
+  <section class="as-conclusion" aria-labelledby="as-conclusion-title" hidden>
+    <button class="as-back as-conclusion-back" type="button">← Volver al universo</button>
+    <div class="as-conclusion-copy">
+      <span class="as-eyebrow">EL CIERRE DE ESTE VIAJE</span>
+      <h1 id="as-conclusion-title">Conclusión del proyecto</h1>
+      <p>Astro Shore convierte datos de movimiento aparente en una experiencia visual, interactiva y cercana. Los planetas se presentan como personajes para que explorar sus cambios sea tan sencillo como conocer a alguien nuevo.</p>
+      <p>La animación, las imágenes, los textos y la música trabajan juntos para mostrar cómo el diseño puede hacer más comprensible y entretenida la información. Cada dirección tiene su propia expresión, y cada visita invita a observar algo distinto.</p>
+      <p class="as-conclusion-note">Los valores son simulados y las interpretaciones astrológicas se ofrecen como entretenimiento: este proyecto es una exploración creativa, no una medición astronómica ni una predicción personal.</p>
+      <p class="as-conclusion-signoff">Gracias por explorar este universo. ¡La órbita sigue!</p>
     </div>
   </section>
   <p class="as-announcement as-sr" aria-live="polite"></p>

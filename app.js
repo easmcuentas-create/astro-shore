@@ -53,7 +53,8 @@
   let lastPeriod = 0;
   let lastSecond = -1;
   let lastFrame = performance.now();
-  const startedAt = Date.now();
+  let startedAt = Date.now();
+  let hasEntered = false;
   const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
   const telemetry = (p, elapsed) => {
     const period = Math.floor(elapsed / CHANGE_MS);
@@ -120,7 +121,33 @@
     if(index!==null)nodes[index].button.focus({preventScroll:true});
   }
   $('.as-back').addEventListener('click',goBack);
-  root.addEventListener('keydown',event=>{if(event.key==='Escape'&&selected!==null)goBack();});
+  $('.as-enter').addEventListener('click',()=>{
+    hasEntered=true;startedAt=Date.now();lastFrame=performance.now();lastSecond=-1;
+    $('.as-welcome').hidden=true;
+    $('.as-universe').hidden=false;
+    nodes[0].button.focus({preventScroll:true});
+    root.scrollIntoView({block:'start',behavior:'instant'});
+  });
+  const conclusionButton=$('.as-conclusion-toggle');
+  function closeConclusion(){
+    $('.as-conclusion').hidden=true;
+    $('.as-universe').hidden=false;
+    root.classList.remove('as-detail-open');
+    conclusionButton.focus();
+  }
+  conclusionButton.addEventListener('click',()=>{
+    $('.as-universe').hidden=true;
+    $('.as-conclusion').hidden=false;
+    root.classList.add('as-detail-open');
+    $('.as-conclusion-back').focus({preventScroll:true});
+    root.scrollIntoView({block:'start',behavior:'instant'});
+  });
+  $('.as-conclusion-back').addEventListener('click',closeConclusion);
+  root.addEventListener('keydown',event=>{
+    if(event.key!=='Escape')return;
+    if(!$('.as-conclusion').hidden)closeConclusion();
+    else if(selected!==null)goBack();
+  });
   function renderDetail(elapsed){
     if(selected===null)return;
     const p=planets[selected],state=telemetry(p,elapsed);
@@ -138,6 +165,7 @@
   new ResizeObserver(()=>{boardWidth=root.clientWidth;}).observe(root);
   function tick(now){
     if(!root.isConnected)return;
+    if(!hasEntered){lastFrame=now;requestAnimationFrame(tick);return;}
     const elapsed=Date.now()-startedAt,period=Math.floor(elapsed/CHANGE_MS);
     const dt=Math.min((now-lastFrame)/1000,.1);lastFrame=now;
     if(period!==lastPeriod){

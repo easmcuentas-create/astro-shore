@@ -66,3 +66,19 @@ body{margin:0;background:#031232}
 #astro-shore .as-volume{width:96px;min-height:32px;accent-color:#ffdb8a;margin:0}
 @media(max-width:760px){#astro-shore .as-header{flex-wrap:wrap}#astro-shore .as-info{flex:1}#astro-shore .as-logo{order:2}#astro-shore .as-audio-controls{order:3;flex-basis:100%;justify-content:flex-start;gap:12px}}
 @media(max-width:360px){#astro-shore .as-volume{width:70px}#astro-shore .as-audio-controls{gap:8px}#astro-shore .as-audio-toggle{min-width:148px;padding:8px 12px}}
+
+#astro-shore .as-conclusion-toggle{padding:10px 18px;min-height:44px;border:1px solid #ffffff77;border-radius:24px;background:var(--as-bg);font-size:14px;white-space:normal}
+#astro-shore .as-conclusion-toggle:hover{background:#162547}
+#astro-shore .as-conclusion-copy{max-width:780px;padding:18px 6% 50px;margin:0 auto;box-sizing:content-box}
+#astro-shore .as-conclusion-copy h1{margin:20px 0 28px}
+#astro-shore .as-conclusion-copy p{font-size:18px;line-height:1.75;margin:0 0 24px}
+#astro-shore .as-conclusion-copy .as-conclusion-note{font-size:16px;color:var(--as-soft)}
+#astro-shore .as-conclusion-signoff{color:#ffdb8a}
+#astro-shore .as-welcome{max-width:820px;margin:0 auto;padding:90px 7% 100px;text-align:center;min-height:620px}
+#astro-shore .as-welcome h1{font-size:clamp(34px,5vw,60px);line-height:1.1;margin:24px 0 30px;letter-spacing:-.03em}
+#astro-shore .as-welcome p{font-size:20px;line-height:1.7;margin:0 auto 20px;max-width:55ch}
+#astro-shore .as-welcome .as-welcome-tip{font-size:17px;color:var(--as-soft)}
+#astro-shore .as-enter{margin-top:20px;min-height:50px;padding:12px 30px;border:0;border-radius:30px;background:#ffdb8a;color:#031232;font-size:18px;font-weight:550}
+#astro-shore .as-enter:hover{background:#ffe7af}
+#astro-shore .as-universe-end{display:flex;justify-content:center;margin:30px 4% 12px}
+@media(max-width:650px){#astro-shore .as-welcome{padding:54px 7% 65px;min-height:520px}#astro-shore .as-welcome p{font-size:17px}#astro-shore .as-welcome .as-welcome-tip{font-size:16px}#astro-shore .as-conclusion-copy p{font-size:16px}}
