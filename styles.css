@@ -1,0 +1,68 @@
+@font-face{font-family:Clash Grotesk;src:url('assets/ClashGrotesk-Variable.woff2') format('woff2');font-weight:200 700;font-display:swap}
+body{margin:0;background:#031232}
+#astro-shore{--as-bg:#031232;--as-ink:#fff;--as-soft:#bcc9e4;--as-red:#c21f37;position:relative;isolation:isolate;overflow:hidden;min-height:820px;background:var(--as-bg);color:var(--as-ink);font-family:Clash Grotesk,Arial,sans-serif;font-size:16px;line-height:1.5;color-scheme:dark}
+#astro-shore *{box-sizing:border-box}
+#astro-shore [hidden]{display:none!important}
+#astro-shore button{font:inherit;color:inherit;cursor:pointer}
+#astro-shore button:focus-visible{outline:3px solid #ffdd80;outline-offset:5px}
+#astro-shore .as-stars{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+#astro-shore .as-star{position:absolute;color:white;line-height:1;opacity:.85}
+#astro-shore .as-header{min-height:105px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 4% 10px}
+#astro-shore .as-info{display:flex;flex-direction:column;gap:7px;font-size:14px;color:var(--as-soft)}
+#astro-shore .as-eyebrow{font-size:12px;letter-spacing:.16em;color:var(--as-ink)}
+#astro-shore .as-countdown{font-variant-numeric:tabular-nums}
+#astro-shore .as-logo{width:110px;height:76px;object-fit:contain}
+#astro-shore .as-orbits{position:relative;height:800px;margin-top:24px}
+#astro-shore .as-lane{position:absolute;left:0;right:0;height:85px}
+#astro-shore .as-orbit{position:absolute;inset:0;width:100%;height:85px;overflow:visible;pointer-events:none}
+#astro-shore .as-orbit path{stroke:#fff;stroke-width:2;fill:none;opacity:.9;vector-effect:non-scaling-stroke}
+#astro-shore .as-planet{position:absolute;left:0;top:0;width:156px;height:84px;padding:0;background:transparent;border:0;display:flex;flex-direction:column;align-items:center;will-change:transform}
+#astro-shore .as-planet img{width:53px;height:53px;object-fit:contain;filter:drop-shadow(0 2px 5px #031232)}
+#astro-shore .as-planet[data-planet="saturno"] img{width:92px}
+#astro-shore .as-telemetry{display:block;position:absolute;bottom:87px;background:#fff;color:#031232;border-radius:22px;padding:4px 12px;min-width:132px;font-size:12px;line-height:1.18;font-weight:450;white-space:nowrap;box-shadow:0 2px 8px #03123233}
+#astro-shore .as-telemetry strong{font-weight:650}
+#astro-shore .as-planet-name{font-size:13px;line-height:1.2;margin-top:2px;text-shadow:0 1px 6px #031232,0 1px 6px #031232}
+#astro-shore .as-hint{margin:12px 4% 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--as-soft);font-size:14px}
+#astro-shore .as-footer{padding:18px 4% 22px;font-size:12px;color:var(--as-soft)}
+#astro-shore .as-back{display:inline-flex;align-items:center;min-height:44px;margin:0 4% 20px;padding:8px 15px;border:1px solid #ffffff66;border-radius:30px;background:#031232}
+#astro-shore .as-back:hover{background:#162547}
+#astro-shore .as-detail-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:auto 1fr;gap:22px 5%;padding:0 5% 35px;min-height:575px}
+#astro-shore .as-profile{grid-row:1 / 3;text-align:center;min-width:0}
+#astro-shore h1,#astro-shore h2{font-weight:450;line-height:1.12;margin:0 0 28px;letter-spacing:-.025em}
+#astro-shore h1{font-size:clamp(32px,3.4vw,46px)}
+#astro-shore h2{font-size:clamp(28px,3vw,38px)}
+#astro-shore .as-portrait-wrap{width:100%;max-width:380px;aspect-ratio:1;margin:0 auto 24px;border-radius:50%;overflow:hidden;background:rgba(255,255,255,.35)}
+#astro-shore .as-portrait{display:block;width:100%;height:100%;object-fit:contain}
+#astro-shore .as-readings{margin:0;display:grid;gap:16px}
+#astro-shore .as-readings dt{font-size:18px;color:var(--as-soft)}
+#astro-shore .as-readings dd{margin:0;font-size:25px;font-weight:500;font-variant-numeric:tabular-nums}
+#astro-shore .as-bio p,#astro-shore .as-mood p,#astro-shore .as-effect p{font-size:18px;line-height:1.65;margin:0;max-width:58ch}
+#astro-shore .as-bio,#astro-shore .as-mood,#astro-shore .as-effect{min-width:0}
+#astro-shore .as-status-title{color:#ffdb8a;font-weight:550;margin-bottom:12px!important}
+#astro-shore .as-effect{grid-column:2 / 4;align-self:start;padding-top:25px}
+#astro-shore .as-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:1500px){#astro-shore .as-detail-grid{gap:30px 6%;padding-left:6%;padding-right:6%}}
+@media(max-width:760px){#astro-shore .as-detail-grid{grid-template-columns:1fr 1fr;gap:28px 6%;padding:0 6% 25px}#astro-shore .as-profile{grid-column:1 / 3;grid-row:auto}#astro-shore .as-portrait-wrap{max-width:280px}#astro-shore .as-readings{grid-template-columns:1fr 1fr}#astro-shore .as-effect{grid-column:1 / 3;padding-top:0}#astro-shore .as-bio p,#astro-shore .as-mood p,#astro-shore .as-effect p{font-size:16px}#astro-shore h2{margin-bottom:18px}}
+@media(max-width:430px){#astro-shore .as-header{padding-left:6%;padding-right:6%}#astro-shore .as-eyebrow{max-width:180px;font-size:11px}#astro-shore .as-info{font-size:12px}#astro-shore .as-logo{width:90px;height:62px}#astro-shore .as-detail-grid{display:flex;flex-direction:column}#astro-shore .as-readings dd{font-size:21px}#astro-shore .as-readings dt{font-size:15px}#astro-shore .as-telemetry{font-size:12px}#astro-shore .as-hint{font-size:12px}#astro-shore .as-back{margin-left:6%}}
+
+#astro-shore.as-detail-open .as-stars{opacity:.35}
+
+#astro-shore .as-planet img{background:radial-gradient(circle closest-side,var(--as-planet-fill) 94%,transparent 96%)}
+#astro-shore .as-planet[data-planet="mercurio"]{--as-planet-fill:#f1d18e}
+#astro-shore .as-planet[data-planet="venus"]{--as-planet-fill:#ff9b25}
+#astro-shore .as-planet[data-planet="marte"]{--as-planet-fill:#bd2032}
+#astro-shore .as-planet[data-planet="jupiter"]{--as-planet-fill:#f0ce89}
+#astro-shore .as-planet[data-planet="saturno"]{--as-planet-fill:#ffedba}
+#astro-shore .as-planet[data-planet="urano"]{--as-planet-fill:#06a1c0}
+#astro-shore .as-planet[data-planet="neptuno"]{--as-planet-fill:#6687d2}
+#astro-shore .as-planet[data-planet="pluton"]{--as-planet-fill:#a4a7af}
+
+#astro-shore .as-audio-controls{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+#astro-shore .as-audio-toggle{min-height:44px;min-width:158px;border:1px solid #ffffff66;border-radius:24px;background:#031232;padding:8px 16px;font-size:14px}
+#astro-shore .as-audio-toggle:hover{background:#162547}
+#astro-shore .as-audio-toggle[aria-pressed="true"]{border-color:#ffdb8a;color:#ffdb8a}
+#astro-shore .as-audio-toggle:disabled{cursor:wait;opacity:.7}
+#astro-shore .as-volume-label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--as-soft)}
+#astro-shore .as-volume{width:96px;min-height:32px;accent-color:#ffdb8a;margin:0}
+@media(max-width:760px){#astro-shore .as-header{flex-wrap:wrap}#astro-shore .as-info{flex:1}#astro-shore .as-logo{order:2}#astro-shore .as-audio-controls{order:3;flex-basis:100%;justify-content:flex-start;gap:12px}}
+@media(max-width:360px){#astro-shore .as-volume{width:70px}#astro-shore .as-audio-controls{gap:8px}#astro-shore .as-audio-toggle{min-width:148px;padding:8px 12px}}

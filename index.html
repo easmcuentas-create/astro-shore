@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Astro Shore: personajes planetarios y movimiento aparente simulado.">
+  <title>Astro Shore</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<main id="astro-shore">
+  <div class="as-stars" aria-hidden="true"></div>
+  <header class="as-header">
+    <div class="as-info"><span class="as-eyebrow">MOVIMIENTO APARENTE</span><span>Simulación · <span class="as-countdown">Revisión en 4:00</span></span></div>
+    <div class="as-audio-controls" aria-label="Música de Astro Shore">
+      <button class="as-audio-toggle" type="button" aria-pressed="false">▶ Activar música</button>
+      <label class="as-volume-label">Volumen <input class="as-volume" type="range" min="0" max="100" value="30" aria-label="Volumen de la música"></label>
+      <span class="as-audio-status as-sr" role="status"></span>
+    </div>
+    <img class="as-logo" src="assets/logo.png" alt="Astro Shore" width="110" height="76">
+  </header>
+  <section class="as-universe" aria-label="Planetas: selecciona uno para conocerlo">
+    <h1 class="as-sr">Los personajes de Astro Shore</h1>
+    <div class="as-orbits"></div>
+    <p class="as-hint">Toca un planeta para conocerlo. <span>Directo → · ← Retrógrado</span></p>
+  </section>
+  <section class="as-detail" aria-label="Ficha del planeta" hidden>
+    <button class="as-back" type="button">← Volver al universo</button>
+    <div class="as-detail-grid">
+      <div class="as-profile">
+        <h1 class="as-name"></h1>
+        <div class="as-portrait-wrap"><img class="as-portrait" src="assets/mercurio-0.webp" alt="" width="720" height="720"></div>
+        <dl class="as-readings"><div><dt>Dirección</dt><dd class="as-direction"></dd></div><div><dt>Velocidad aparente</dt><dd class="as-speed"></dd></div></dl>
+      </div>
+      <div class="as-bio"><h2>Quién es</h2><p class="as-personality"></p></div>
+      <div class="as-mood"><h2>Cómo está</h2><p class="as-status-title"></p><p class="as-status-text"></p></div>
+      <div class="as-effect"><h2>Cómo te afecta</h2><p class="as-effect-text"></p></div>
+    </div>
+  </section>
+  <p class="as-announcement as-sr" aria-live="polite"></p>
+  <footer class="as-footer">Datos simulados en °/día · Interpretaciones astrológicas de entretenimiento.</footer>
+</main>
+</body>
+</html>
